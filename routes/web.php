@@ -4,7 +4,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ThemeController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\CourseRegistrationController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,6 +21,8 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', [Controller::class, 'index'])->name('dashboard')->middleware(['auth', 'verified']);
+/* Route::get('/courseregistration', [CourseController::class, 'index'])->name('courseregistration')->middleware(['auth', 'verified']); */
+Route::resource('/courseregistration', CourseRegistrationController::class);
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

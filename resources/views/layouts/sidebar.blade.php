@@ -22,7 +22,7 @@
             </header>
 
             <!-- Sidebar content here -->
-            <a href="" class="sidebar-item {{ Route::is('account.index') ? 'active' : '' }}">
+            <a href="./courseregistration" class="sidebar-item {{ Route::is('account.index') ? 'active' : '' }}">
                 <i class="fa-solid fa-registered"></i>
                 Course Registration
             </a>
