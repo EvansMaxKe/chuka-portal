@@ -51,3 +51,14 @@
 .custom-z {
     z-index: 9999 !important;
 }
+button.mybtn{
+    margin:0 auto;
+    box-shadow:2px 2px 4px black;
+    border-radius: 8px;
+}
+table thead{
+    border-radius: 8px;
+}
+table td{
+    font-weight: bold;
+}

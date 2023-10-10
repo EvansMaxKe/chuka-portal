@@ -27,12 +27,12 @@
                 Course Registration
             </a>
 
-            <a href="" class="sidebar-item {{ Route::is('user.withdrawals') ? 'active' : '' }}">
+            <a href="./timetable" class="sidebar-item {{ Route::is('user.withdrawals') ? 'active' : '' }}">
                 <i class="fa-solid fa-clock"></i>
                 Timetable
             </a>
 
-            <a href="" class="sidebar-item {{ Route::is('notifications.user') ? 'active' : '' }}">
+            <a href="./academicrequisition" class="sidebar-item {{ Route::is('notifications.user') ? 'active' : '' }}">
                 <i class="fa-solid fa-code-merge"></i>
                 Academic Requisition
             </a>

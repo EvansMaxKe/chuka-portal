@@ -5,6 +5,9 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ThemeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CourseRegistrationController;
+use App\Http\Controllers\TimeTableController;
+use App\Http\Controllers\UnitListController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,7 +25,10 @@ Route::get('/', function () {
 
 Route::get('/dashboard', [Controller::class, 'index'])->name('dashboard')->middleware(['auth', 'verified']);
 /* Route::get('/courseregistration', [CourseController::class, 'index'])->name('courseregistration')->middleware(['auth', 'verified']); */
-Route::resource('/courseregistration', CourseRegistrationController::class);
+/* Route::resource('/courseregistration', CourseRegistrationController::class); */
+Route::resource('/unitlist', UnitListController::class);
+Route::resource('/timetable', TimeTableController::class);
+Route::get('/courseregistration', [CourseRegistrationController::class, 'index'])->name('courseregistration');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

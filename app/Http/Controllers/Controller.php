@@ -11,7 +11,7 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, ValidatesRequests;
 
-    public function index(): View
+    public function index()
     {
         $user = auth()->user();
         if (!$user->profileComplete()) {
